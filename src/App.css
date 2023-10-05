@@ -2,37 +2,39 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#BusDiv{
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+#BusDiv > h1 {
+  grid-column: 1;
+  grid-row: span 2;
+  margin: 0.5rem;
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: lighter;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+#BusDiv > .company{
+  grid-column: 1;
+  grid-row: 3;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#BusDiv > .from{
+  grid-column: 2;
+  grid-row: 1;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#BusDiv > .to{
+  grid-column: 2;
+  grid-row: 2;
+}
+#BusDiv > .from, #BusDiv > .to{
+  text-align: right;
+  padding-right: 0.5rem;
+  opacity: 0.7;
 }

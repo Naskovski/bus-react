@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import kusk from "./resources/ku-sk.json"
+import skku from "./resources/sk-ku.json"
+import BusLineDisplay from "./components/BusLineDisplay";
+import {useEffect, useState} from "react";
 
 function App() {
+    const [direction, setDirection] = useState('kusk')
+    const [readFile, setReadFile] = useState(kusk)
+    const nowTime = new Date().toTimeString();
+
+    let switchDest = () =>{
+        if(direction === 'kusk') setDirection('skku')
+        else setDirection('kusk')
+    }
+    useEffect(()=>{
+        setReadFile(direction==='kusk'?kusk:skku)
+    },[direction])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        Bus Kumanovo
       </header>
+        <button onClick={switchDest}>switch</button>
+      <section>
+        {readFile.filter((item) => {
+            const timeOfBus = new Date(`1970-01-01T${item.Време}`).toTimeString();
+            return timeOfBus>nowTime;
+        }).map((item, index) =>(
+            <BusLineDisplay key={index} item={item}/>
+        ))}
+      </section>
+
     </div>
   );
 }
