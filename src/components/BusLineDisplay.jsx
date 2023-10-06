@@ -8,13 +8,15 @@ export default function BusLineDisplay(props){
     const from=item.Поаѓање
     const to=item.До
 
-   const [border, setBorder] = useState("#ff0000")
-    useEffect(()=> {
+    const [border, setBorder] = useState("#ff0000")
+
+    useEffect(() => {
         if (from === "Макпетрол")
             setBorder("#eac928")
-        if (to === "Рамстор")
+        else if (from === "Рамстор")
             setBorder("#ff9900")
-    },[])
+        else setBorder("#ff0000")
+    },[from])
 
     return (
         <div style={{borderColor: border}} id={'BusDiv'}>

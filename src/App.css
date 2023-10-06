@@ -9,7 +9,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-
+  transition: 1s;
+  padding: 0.5rem;
+}
+#BusDiv:hover, button:active{
+  background-color: #d2d2d2;
 }
 #BusDiv > h1 {
   grid-column: 1;
@@ -37,4 +41,52 @@
   text-align: right;
   padding-right: 0.5rem;
   opacity: 0.7;
+}
+button{
+  background-color: #00000000;
+  width: 15rem;
+  height: 10rem;
+  margin: 3rem;
+  border-radius: 1rem;
+  color: black;
+  font-size: 1.2rem;
+  border: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color: #252b31;
+    color: white;
+  }
+  #BusDiv:hover, button:active{
+    background-color: #363f48;
+  }
+  button{
+    color: white;
+  }
+}
+
+#BusDiv:first-child{
+  background-color: red;
+  height: 10rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+#BusDiv:first-child > h1{
+  grid-row: 1;
+  grid-column: span 2;
+  font-size: 3rem;
+}
+#BusDiv:first-child > .company{
+  grid-row: 2;
+  grid-column: span 2;
+}
+#BusDiv:first-child > .from{
+  grid-row: 3;
+  grid-column: 1;
+}
+#BusDiv:first-child > .to{
+  grid-row: 3;
+  grid-column: 2;
 }
