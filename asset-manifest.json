@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bus-react/static/css/main.28c4ca9a.css",
+    "main.css": "/bus-react/static/css/main.bb08e1e5.css",
     "main.js": "/bus-react/static/js/main.5a1e9e75.js",
     "static/js/787.92ee4544.chunk.js": "/bus-react/static/js/787.92ee4544.chunk.js",
     "index.html": "/bus-react/index.html",
-    "main.28c4ca9a.css.map": "/bus-react/static/css/main.28c4ca9a.css.map",
+    "main.bb08e1e5.css.map": "/bus-react/static/css/main.bb08e1e5.css.map",
     "main.5a1e9e75.js.map": "/bus-react/static/js/main.5a1e9e75.js.map",
     "787.92ee4544.chunk.js.map": "/bus-react/static/js/787.92ee4544.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28c4ca9a.css",
+    "static/css/main.bb08e1e5.css",
     "static/js/main.5a1e9e75.js"
   ]
 }
