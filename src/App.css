@@ -5,7 +5,7 @@
 #BusDiv{
   margin: 0.5rem;
   border-radius: 0.5rem;
-  border: 1px solid red;
+  border: 3px solid #fe654f;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -68,10 +68,13 @@ button{
 }
 
 #BusDiv:first-child{
-  background-color: red;
+  background-color: rgb(1, 25, 54);
   height: 10rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
+}
+#BusDiv:first-child h1{
+  font-weight: bold;
 }
 #BusDiv:first-child > h1{
   grid-row: 1;
@@ -90,3 +93,12 @@ button{
   grid-row: 3;
   grid-column: 2;
 }
+/*logo*/
+ .material-symbols-outlined {
+   font-size: 3rem;
+   font-variation-settings:
+           'FILL' 0,
+           'wght' 400,
+           'GRAD' 0,
+           'opsz' 24
+ }

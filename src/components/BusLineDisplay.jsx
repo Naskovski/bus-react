@@ -15,7 +15,7 @@ export default function BusLineDisplay(props){
             setBorder("#eac928")
         else if (from === "Рамстор")
             setBorder("#ff9900")
-        else setBorder("#ff0000")
+        else setBorder("#fe654f")
     },[from])
 
     return (
